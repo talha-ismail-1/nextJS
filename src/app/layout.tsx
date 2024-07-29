@@ -45,19 +45,12 @@ export default function RootLayout({
           <title>Web Application</title>
         </head>
         <body>
-          <main className="flex min-h-screen flex-col items-center justify-between">
-
-            <SidebarProvider>
+          <SidebarProvider>
             {!hideLayout &&  <Header /> }
-              <div className="flex overflow-hidden">
               {!hideLayout &&  <SideNav title={name}/> }
-                <div className={hideLayout ? 'h-full' : 'flex-1 overflow-y-auto overflow-hidden'}>
-                  {children}
-                </div>
-              </div>
+                {children}
             {!hideLayout && <Footer />}
-            </SidebarProvider>
-          </main>
+          </SidebarProvider>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         </body>
