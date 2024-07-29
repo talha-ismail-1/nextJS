@@ -2,32 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import "./style/custom.css";
+header {
+  @apply  w-full;
+}
+footer {
+  @apply  w-full;
+}
+.sidenav {
+  @apply h-full fixed z-20 top-0 left-0 bg-gray-900 overflow-x-hidden transition-all duration-500 pt-16 text-white text-lg flex flex-col;
+  width: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.sidenav ul {
+  @apply flex flex-col h-full;
+}
+
+.sidenav a {
+  @apply block p-2 pl-8 text-gray-400 text-lg no-underline transition-colors duration-300;
+}
+
+.sidenav a:hover {
+  @apply text-white;
+}
+
+.sidenav .closebtn {
+  @apply absolute top-0 right-6 text-3xl mt-2 ml-12 cursor-pointer;
+}
+
+.sidebar-footer {
+  @apply p-4 bg-gray-900 text-center;
+}
+
+.footerSection{
+  @apply bg-gray-900 text-white text-center p-4 w-full;
+}
+.footerSection ul{
+  @apply absolute flex gap-5;
+}
+
+#mySidenav.active {
+  width: 16rem; /* 250px */
+}
+
+body{
+  font-size: 14px !important;
+}
+
+#main {
+  @apply transition-all duration-500 p-4;
+}
+
+body.active {
+  @apply transition-all duration-500;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply transition-all duration-300 relative overflow-x-hidden;
+  left: 0;
+}
+.homeContent-section, 
+.homeContent-section-services{
+  @apply bg-gray-800 text-white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.homeContent-section h1{
+  @apply bg-gray-800 text-white;
+}
+.homeContent-section-services a{
+  @apply text-white flex;
+}
+
+@media screen and (max-height: 450px) {
+ .sidenav {
+    @apply pt-4;
+  }
+
+  .sidenav a {
+    @apply text-base;
+  }
+}
+@media screen and (min-height: 768px) {
+  .footerSection ul{
+    @apply relative block;
+  }
+  .sidenav {
+    @apply pt-4;
+  }
+
+  .sidenav a {
+    @apply text-base;
   }
 }

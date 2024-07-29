@@ -1,0 +1,65 @@
+html {
+    scroll-behavior: smooth;
+  }
+  body{
+    font-size: 16px;
+  }
+.home-demo .item {
+    background: #ff3f4d;
+}
+.home-demo h2 {
+    color: #FFF;
+    text-align: center;
+    padding: 5rem 0;
+    margin: 0;
+    font-style: italic;
+    font-weight: 300;
+}
+.headerSection h1 {
+    color: #FFF;
+    font-size: 24px;
+}
+.headerSection-items ul li a {
+    text-decoration: none;
+    -tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+.headerSection-items ul li a:hover {
+    color: #FFF;
+    transition: all 0.3s;
+}
+.headerSection-items ul li:first-child a {
+    color: #FFF;
+}
+.loginPage {
+    background: #f9f9f9;
+    position: relative;
+}
+.loginPage .container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loginPage .container h1 {
+    position: absolute;
+    font-size: 2rem;
+    margin: 0;
+    top: 7rem;
+  }
+
+  .loginPage .container button{
+    background: #ff3f4d;
+    color: #FFF;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-block-start: 10px;
+    width: 100%;
+  }
